@@ -8,7 +8,7 @@
 
 .confirmed {
     border-radius: 10px solid;
-    box-shadow:  2px 1px -1px rgb(122, 2, 2);
+    box-shadow: 0 0 10px rgba(133, 1, 150, 0.9);
 }
 
 .recovered {
