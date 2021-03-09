@@ -37,7 +37,7 @@ class App extends React.Component {
                 <Cards data={data}/> 
 
                 {/* Calling Country Picker drop down component */}
-                <CountryPicker handleCountryChange={handleCountryChange}/>
+                <CountryPicker handleCountryChange={this.componentWillUnmounthandleCountryChange}/>
 
                 {/* Calling Chart to display the data visually */}
                 <Chart/>
