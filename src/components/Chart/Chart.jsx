@@ -10,11 +10,20 @@ const Chart = () => {
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData);
         }
+
+        console.log(dailyData);
         fetchAPI();
     });
 
     const lineChart = (
-
+        dailyData[0] 
+        ? (
+        <Line
+            data= {{ 
+                labels: '',
+                datasets: [{}, {}],
+            }}
+        />) : null
     );
     return (
         <h1>Charts</h1>
