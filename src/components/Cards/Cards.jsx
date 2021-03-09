@@ -2,7 +2,9 @@ import React from 'react';
 import {Card, CardContent, Typography, Grid } from '@material-ui/core';
 import styles from './Cards.module.css'
 const Cards = ({confirmed, recovered, deaths, lastUpdate}) => {
-    console.log(props);
+    if (!confirmed) {
+        return Loading
+    }
     return (
         <div className = {styles.container}>
             <Grid container spacing={3} justify="center">
