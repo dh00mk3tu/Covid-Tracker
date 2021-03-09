@@ -12,7 +12,7 @@ const CountryPicker = () => {
             setFetchedCountries(await countries);
         }
         fetchCountries();
-    });
+    }, [setFetchedCountries]);
     return (
         <FormControl className={styles.formControl}>
             <NativeSelect>
