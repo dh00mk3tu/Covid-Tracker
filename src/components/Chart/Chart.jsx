@@ -8,10 +8,8 @@ const Chart = () => {
 
     useEffect( () =>{
         const fetchAPI = async () => {
-            setDailyData(await fetchDailyData);
+            setDailyData(await fetchDailyData());
         }
-
-        console.log(dailyData);
         fetchAPI();
     }, [dailyData]);
 
