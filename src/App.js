@@ -12,7 +12,7 @@ import { fetchData } from './api';
 class App extends React.Component {
     // Declaring state instead of Constructor because why not. 
     state = {
-        // Populating the fetched data to data
+        // Populating the fetched data to data{}
         data: {},
     }
 
@@ -24,11 +24,12 @@ class App extends React.Component {
     }
 
     render() {
+        const {data} = this.state;
         return (
             <div className={styles.container}>
 
                 {/* Calling Display Cards */}
-                <Cards/> 
+                <Cards data={data}/> 
 
                 {/* Calling Country Picker drop down component */}
                 <CountryPicker/>
