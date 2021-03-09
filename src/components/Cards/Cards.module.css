@@ -20,6 +20,3 @@
     border-radius: 10px solid;
     box-shadow: 0 0 10px rgba(122, 0, 0, 0.9);
 }
-.MuiPaper-elevation {
-    box-shadow: none;
-}
