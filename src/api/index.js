@@ -3,8 +3,12 @@ import axios from 'axios';
 const url = 'https://covid19.mathdro.id/api';
 
 // request handler for cards 
-export const fetchData = async() => {
+export const fetchData = async(country) => {
     let mutableUrl= url;
+
+    if (country) {
+        mutableUrl = `${url}/countries`;
+    }
     try {
         const {data: {confirmed, recovered, deaths, lastUpdate}} = await axios.get(url);
 
@@ -20,7 +24,7 @@ export const fetchData = async() => {
 // request handler for chart
 export const fetchDailyData = async () => {
     try {
-      const { data } = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
+      const { data } = await axios.get('https://api.covidtracking.com/v1/in/daily.json');
   
       return data.map(({ positive, recovered, death, dateChecked: date }) => ({ confirmed: positive, recovered, deaths: death, date }));
     } catch (error) {
