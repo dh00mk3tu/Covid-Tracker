@@ -10,12 +10,12 @@ const Chart = () => {
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData());
         }
-        console.log(dailyData);
+        console.log("daily data",dailyData);
         fetchAPI();
     },[]);
 
     const lineChart = (
-        dailyData.length
+        dailyData.length !== 0
         ? (
         <Line
             data= {{ 
