@@ -4,7 +4,10 @@ const Chart = () => {
     const [dailyData, setDailyData] = useState({});
 
     useEffect( () =>{
-        const fetchDailyData
+        const fetchAPI = async () => {
+            setDailyData(await fetchDailyData);
+        }
+        fetchAPI();
     });
     return (
         <h1>Charts</h1>
