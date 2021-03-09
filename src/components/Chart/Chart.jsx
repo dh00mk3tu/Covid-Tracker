@@ -35,7 +35,7 @@ const Chart = () => {
         />) : null
     );
     return (
-        <div className={stlyes.container}>
+        <div className={styles.container}>
             {linechart}    
         </div>
     )
