@@ -8,15 +8,15 @@
 
 .confirmed {
     border-radius: 10px solid;
-    box-shadow: 0 0 10px rgba(255, 0, 34, 0.5);
+    box-shadow: 0 0 10px rgba(255, 0, 34, 0.9);
 }
 
 .recovered {
     border-radius: 10px solid;
-    box-shadow: 0 0 10px rgba(2, 255, 149, 0.9);
+    box-shadow: 0 0 10px rgba(0, 129, 75, 0.9);
 }
 
 .deaths {
     border-radius: 10px solid;
-    box-shadow: 0 0 10px rgba(0,0,255,0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.9);
 }
