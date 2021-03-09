@@ -18,15 +18,15 @@ const Chart = () => {
         ? (
         <Line
             data= {{ 
-                labels: DailyData(({date})=>date),
+                labels: dailyData.map(({date})=>date),
                 datasets: [{
-                    data: dailyData(({confirmed}) =>confirmed),
+                    data: dailyData.map(({confirmed}) =>confirmed),
                     label : "Confirmed",
                     borderColor: "#3333ff",
                     fill: true,
                 }, 
                 {
-                    data: dailyData(({deaths}) =>deaths),
+                    data: dailyData.map(({deaths}) =>deaths),
                     label : "Deaths",
                     borderColor: "#33453ff",
                     fill: true,
@@ -36,7 +36,7 @@ const Chart = () => {
     );
     return (
         <div className={styles.container}>
-            {linechart}    
+            {lineChart}    
         </div>
     )
 }
