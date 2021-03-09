@@ -8,6 +8,9 @@
 # Auto Git
 auto-git.sh
 
+# release
+/release 
+
 # testing
 /coverage
 
