@@ -37,7 +37,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                         <Typography color="textSecondary" gutterBottom>
                             Deaths
                         </Typography>
-                        <Typography variant="h5">Real Data</Typography>
+                        <Typography variant="h5">{deaths.value}</Typography>
                         <Typography color="textSecondary">Real Data</Typography>
                         <Typography variant="body2">Number of Humans Lost to Covid -19</Typography>
                     </CardContent>
