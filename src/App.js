@@ -30,7 +30,7 @@ class App extends React.Component {
     }
 
     render() {
-        const {data} = this.state;
+        const {data, country} = this.state;
         return (
             <div className={styles.container}>
 
@@ -41,7 +41,7 @@ class App extends React.Component {
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
 
                 {/* Calling Chart to display the data visually */}
-                <Chart data={data}/>
+                <Chart data={data} country={country}/>
 
             </div>
         )
