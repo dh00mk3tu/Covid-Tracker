@@ -7,13 +7,16 @@
 }
 
 .infected {
-    border-radius: 10px solid rgba(0,0,255,0.5);
+    border-radius: 10px solid;
+    box-shadow: 0 0 10px rgba(0,0,255,0.5);
 }
 
 .infected {
-    border-radius: 10px solid rgba(0, 255, 128, 0.5);
+    border-radius: 10px solid;
+    box-shadow: 0 0 10px rgba(2, 255, 149, 0.5);
 }
 
 .deaths {
-    border-radius: 10px solid rgba(124, 2, 2, 0.5);
+    border-radius: 10px solid;
+    box-shadow: 0 0 10px rgba(0,0,255,0.5);
 }
