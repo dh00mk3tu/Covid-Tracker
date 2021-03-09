@@ -13,7 +13,7 @@ const Chart = () => {
 
         console.log(dailyData);
         fetchAPI();
-    });
+    }, [dailyData]);
 
     const lineChart = (
         dailyData[0] 
