@@ -19,7 +19,18 @@ const Chart = () => {
         <Line
             data= {{ 
                 labels: DailyData(({date})=>date),
-                datasets: [{}, {}],
+                datasets: [{
+                    data: dailyData(({confirmed}) =>confirmed),
+                    label : "Confirmed",
+                    borderColor: "#3333ff",
+                    fill: true,
+                }, 
+                {
+                    data: dailyData(({deaths}) =>deaths),
+                    label : "Deaths",
+                    borderColor: "#33453ff",
+                    fill: true,
+                }],
             }}
         />) : null
     );
