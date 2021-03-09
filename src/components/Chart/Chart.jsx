@@ -4,17 +4,17 @@ import {Line, Bar} from 'react-chartjs-2';
 import styles from './Chart.module.css';
 
 const Chart = () => {
-    const [dailyData, setDailyData] = useState({});
+    const [dailyData, setDailyData] = useState([]);
 
     useEffect( () =>{
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData());
         }
         fetchAPI();
-    }, [dailyData]);
+    });
 
     const lineChart = (
-        dailyData[0] 
+        dailyData.length
         ? (
         <Line
             data= {{ 
