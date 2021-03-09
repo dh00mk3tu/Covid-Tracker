@@ -16,6 +16,7 @@ class App extends React.Component {
                 <Cards/> 
                 {/* Calling Country Picker drop down component */}
                 <CountryPicker/>
+                {/* Calling Chart to display the data visually */}
                 <Chart/>
             </div>
         )
