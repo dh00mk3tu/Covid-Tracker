@@ -10,8 +10,9 @@ import styles from './App.module.css';
 import { fetchData } from './api';
 
 class App extends React.Component {
-
+    // Declaring state instead of Constructor because why not. 
     state = {
+        // Populating the fetched data to data
         data: {},
     }
 
@@ -19,7 +20,7 @@ class App extends React.Component {
     async componentDidMount() {
         const fetchedData = await fetchData();
         this.setState({fetchedData});
-        // console.log(data);
+
     }
 
     render() {
@@ -28,8 +29,10 @@ class App extends React.Component {
 
                 {/* Calling Display Cards */}
                 <Cards/> 
+
                 {/* Calling Country Picker drop down component */}
                 <CountryPicker/>
+
                 {/* Calling Chart to display the data visually */}
                 <Chart/>
 
