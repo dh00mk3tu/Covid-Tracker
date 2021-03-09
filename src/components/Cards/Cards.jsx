@@ -12,6 +12,7 @@ const Cards = (bruh) => {
                             Infected 
                         </typography>
                         <typography variant="h5">Real Data</typography>
+                        <typography color="textSecondary">Real Data</typography>
                     </CardContent>
                 </Grid>
             </Grid>
