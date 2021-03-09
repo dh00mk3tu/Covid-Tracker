@@ -9,9 +9,10 @@ const CountryPicker = () => {
     const [fetchedCountries, setFetchedCountries] = useState([]);
     useEffect(() => {
         const fetchCountries = async() => {
-
+            setFetchedCountries(await countries);
         }
-    })
+        fetchCountries();
+    });
     return (
         <FormControl className={styles.formControl}>
             <NativeSelect>
