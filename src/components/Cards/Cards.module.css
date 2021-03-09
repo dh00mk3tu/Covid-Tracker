@@ -9,6 +9,7 @@
 .confirmed {
     border-radius: 10px solid;
     box-shadow: 0 0 10px rgba(133, 1, 150, 0.9);
+    animation : 0.5s ease-in-out;
 }
 
 .recovered {
