@@ -2,6 +2,7 @@
 
 ## Introduction
 Covid Tracker Application in React
+---
 This light weight web app tracks active Covid cases of 192 Countries and Global cases. It represents the data using interactive Bar Graphs & Line Charts 
 
 ## RUN
