@@ -2,6 +2,7 @@ import React from 'react';
 import {Card, CardContent, Typography, Grid } from '@material-ui/core';
 import styles from './Cards.module.css'
 import Countup from 'react-countup';
+import cx from 'classNames';
 
 const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
     // console.log(confirmed);
@@ -11,7 +12,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
     return (
         <div className = {styles.container}>
             <Grid container spacing={3} justify="center">
-                <Grid item component={Card}>
+                <Grid item component={Card} className={styles.}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             Infected 
