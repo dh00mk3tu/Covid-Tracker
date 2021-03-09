@@ -41,7 +41,15 @@ const Chart = ({data, country}) => {
         ? (
             <Bar>
                 data={{
-
+                    labels: ['Infected', 'Recovered', 'Deaths'],
+                    datasets: [{
+                        label: 'People',
+                        backgroundColor: [
+                            'rgba(133, 1, 150, 0.9)',
+                            'rgba(0, 129, 75, 0.9)',
+                            'rgba(122, 0, 0, 0.9)'
+                        ]
+                    }]
                 }}
                 options= {{
                     legend: {display:false},
