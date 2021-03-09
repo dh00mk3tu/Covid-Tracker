@@ -1,4 +1,4 @@
-# COVID-19 Tracker
+# COVID-19 Tracker - [Live](https://corona-watch.netlify.app/)
 
 ## Introduction
 Covid Tracker Application in React
