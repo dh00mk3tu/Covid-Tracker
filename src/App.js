@@ -24,6 +24,10 @@ class App extends React.Component {
 
     }
 
+    handleCountryChange = async (country) => {
+        console.log(country);
+    }
+
     render() {
         const {data} = this.state;
         return (
@@ -33,7 +37,7 @@ class App extends React.Component {
                 <Cards data={data}/> 
 
                 {/* Calling Country Picker drop down component */}
-                <CountryPicker/>
+                <CountryPicker handleCountryChange={handleCountryChange}/>
 
                 {/* Calling Chart to display the data visually */}
                 <Chart/>
