@@ -22,7 +22,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                             duration={2.5}
                             separator={","}
                         />
-                        <Typography color="textSecondary">{lastUpdate}</Typography>
+                        <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
                         <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
                     </CardContent>
                 </Grid>
