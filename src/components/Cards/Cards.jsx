@@ -6,7 +6,14 @@ const Cards = (bruh) => {
     return (
         <div className = {styles.container}>
             <Grid container spacing={3} justify="center">
-
+                <Grid item component={Card}>
+                    <CardContent>
+                        <typography color="textSecondary" gutterBottom>
+                            Infected 
+                        </typography>
+                        <typography variant="h5">Real Data</typography>
+                    </CardContent>
+                </Grid>
             </Grid>
         </div>
     )
