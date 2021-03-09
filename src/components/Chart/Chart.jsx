@@ -18,7 +18,7 @@ const Chart = () => {
         ? (
         <Line
             data= {{ 
-                labels: '',
+                labels: DailyData(({date})=>date),
                 datasets: [{}, {}],
             }}
         />) : null
