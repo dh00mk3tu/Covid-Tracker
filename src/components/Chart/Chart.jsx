@@ -22,7 +22,7 @@ const Chart = () => {
                 labels: dailyData.map(({date})=>date),
                 datasets: [{
                     data: dailyData.map(({confirmed}) =>confirmed),
-                    label : "Confirmed",
+                    label : "Confirmed Cases",
                     borderColor: "#3333ff",
                     fill: true,
                 }, 
