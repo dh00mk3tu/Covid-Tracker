@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card, CardContent, Typography, Grid } from '@material-ui/core';
 import styles from './Cards.module.css'
+import Countup from './Countup.'
 
 const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
     // console.log(confirmed);
@@ -16,7 +17,7 @@ const Cards = ({data :{confirmed, recovered, deaths, lastUpdate}}) => {
                             Infected 
                         </Typography>
                         <Typography variant="h5">{confirmed.value}</Typography>
-                        <Typography color="textSecondary">Real Data</Typography>
+                        <Typography color="textSecondary">Real Date</Typography>
                         <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
                     </CardContent>
                 </Grid>
