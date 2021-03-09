@@ -1,70 +1,78 @@
-import React, {useState, useEffect} from 'react';
-import {fetchDailyData} from '../../api';
-import {Line, Bar} from 'react-chartjs-2';  
+import React, { useState, useEffect } from 'react';
+import { Line, Bar } from 'react-chartjs-2';
+
+import { fetchDailyData } from '../../api';
+
 import styles from './Chart.module.css';
 
-const Chart = ({data : {confirmed, recovered, deaths}, country}) => {
-    const [dailyData, setDailyData] = useState([]);
+const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
+  const [dailyData, setDailyData] = useState({});
 
-    useEffect(() =>{
-        const fetchAPI = async () => {
-            setDailyData(await fetchDailyData());
-        }
-        console.log("daily data",dailyData);
-        fetchAPI();
-    },[]);
+  useEffect(() => {
+    const fetchMyAPI = async () => {
+      const initialDailyData = await fetchDailyData();
 
-    const lineChart = (
-        dailyData.length !== 0
-        ? (
-        <Line
-            data= {{ 
-                labels: dailyData.map(({date})=>date),
-                datasets: [{
-                    data: dailyData.map(({confirmed}) =>confirmed),
-                    label : "Confirmed Cases",
-                    borderColor: "#3333ff",
-                    fill: true,
-                }, 
-                {
-                    data: dailyData.map(({deaths}) =>deaths),
-                    label : "Deaths",
-                    borderColor: "#b8393e",
-                    fill: true,
-                }],
-            }}
-        />) : null
-    );
+      setDailyData(initialDailyData);
+    };
 
-    
-    const barChart = (
-        confirmed
-        ? (
-            <Bar>
-                data={{
-                    labels: ['Infected', 'Recovered', 'Deaths'],
-                    datasets: [{
-                        label: 'People',
-                        backgroundColor: [
-                            'rgba(133, 1, 150, 0.9)',
-                            'rgba(0, 129, 75, 0.9)',
-                            'rgba(122, 0, 0, 0.9)',
-                        ],
-                        data :[confirmed.value, recovered.value, deaths.value]
-                    }]
-                }}
-                options= {{
-                    legend: {display:false},
-                    title: {display: true, text:`Status of ${country}`},
-                }}
-            </Bar>
-        ) : null
-    )
-    return (
-        <div className={styles.container}>
-            {country ? barChart : lineChart}    
-        </div>
-    )
-}
+    fetchMyAPI();
+  }, []);
+
+  const barChart = (
+    confirmed ? (
+      <Bar
+        data={{
+          labels: ['Infected', 'Recovered', 'Deaths'],
+          datasets: [
+            {
+              label: 'People',
+              backgroundColor: ['rgba(0, 0, 255, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)'],
+              data: [confirmed.value, recovered.value, deaths.value],
+            },
+          ],
+        }}
+        options={{
+          legend: { display: false },
+          title: { display: true, text: `Current state in ${country}` },
+        }}
+      />
+    ) : null
+  );
+
+  const lineChart = (
+    dailyData[0] ? (
+      <Line
+        data={{
+          labels: dailyData.map(({ date }) => new Date(date).toLocaleDateString()),
+          datasets: [{
+            data: dailyData.map((data) => data.confirmed),
+            label: 'Infected',
+            borderColor: '#3333ff',
+            fill: true,
+          }, {
+            data: dailyData.map((data) => data.deaths),
+            label: 'Deaths',
+            borderColor: 'red',
+            backgroundColor: 'rgba(255, 0, 0, 0.5)',
+            fill: true,
+          },  {
+            data: dailyData.map((data) => data.recovered),
+            label: 'Recovered',
+            borderColor: 'green',
+            backgroundColor: 'rgba(0, 255, 0, 0.5)',
+            fill: true,
+          },
+          ],
+        }}
+      />
+    ) : null
+  );
+
+  return (
+    <div className={styles.container}>
+      {country ? barChart : lineChart}
+    </div>
+  );
+};
 
 export default Chart;

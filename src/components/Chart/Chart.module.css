@@ -1,6 +1,12 @@
 .container {
-    display: flex;
-    justify-content:center;
-    width: 55%;
-    height: 512px;
+  display: flex;
+  justify-content: center;
+  width: 65%;
+  height: 480px;
+}
+
+@media only screen and (max-width: 770px) {
+  .container {
+    width: 100%;
+  }
 }
