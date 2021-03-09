@@ -14,6 +14,7 @@ class App extends React.Component {
     state = {
         // Populating the fetched data to data{}
         data: {},
+        country: '',
     }
 
     // Data fetched from the API here
