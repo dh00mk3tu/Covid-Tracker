@@ -12,7 +12,9 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>COVID - OPJINDAL</h1>
+                <Cards/>
+                <CountryPicker/>
+                <Chart/>
             </div>
         )
     }
