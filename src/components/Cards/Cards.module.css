@@ -5,3 +5,15 @@
 .card {
     margin : 0 2% !important;
 }
+
+.infected {
+    border-radius: 10px solid rgba(0,0,255,0.5);
+}
+
+.infected {
+    border-radius: 10px solid rgba(0, 255, 128, 0.5);
+}
+
+.deaths {
+    border-radius: 10px solid rgba(124, 2, 2, 0.5);
+}
