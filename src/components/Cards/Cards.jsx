@@ -8,12 +8,32 @@ const Cards = (bruh) => {
             <Grid container spacing={3} justify="center">
                 <Grid item component={Card}>
                     <CardContent>
-                        <typography color="textSecondary" gutterBottom>
+                        <Typography color="textSecondary" gutterBottom>
                             Infected 
-                        </typography>
-                        <typography variant="h5">Real Data</typography>
-                        <typography color="textSecondary">Real Data</typography>
-                        <typography variant="body2">Number of Humans Infected with Covid -19</typography>
+                        </Typography>
+                        <Typography variant="h5">Real Data</Typography>
+                        <Typography color="textSecondary">Real Data</Typography>
+                        <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
+                    </CardContent>
+                </Grid>
+                <Grid item component={Card}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom>
+                            Infected 
+                        </Typography>
+                        <Typography variant="h5">Real Data</Typography>
+                        <Typography color="textSecondary">Real Data</Typography>
+                        <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
+                    </CardContent>
+                </Grid>
+                <Grid item component={Card}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom>
+                            Infected 
+                        </Typography>
+                        <Typography variant="h5">Real Data</Typography>
+                        <Typography color="textSecondary">Real Data</Typography>
+                        <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
                     </CardContent>
                 </Grid>
             </Grid>
