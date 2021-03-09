@@ -6,10 +6,11 @@ import styles from './Chart.module.css';
 const Chart = () => {
     const [dailyData, setDailyData] = useState([]);
 
-    useEffect( () =>{
+    useEffect(() =>{
         const fetchAPI = async () => {
             setDailyData(await fetchDailyData());
         }
+        console.log(dailyData);
         fetchAPI();
     },[]);
 
