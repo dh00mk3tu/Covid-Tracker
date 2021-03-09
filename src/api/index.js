@@ -15,3 +15,12 @@ export const fetchData = async() => {
 
     }
 }
+
+export const fetchDailyData = async => {
+    try {
+        const response = await axnios.get(`${url}/daily`);
+    }
+    catch (error) {
+
+    }
+}
