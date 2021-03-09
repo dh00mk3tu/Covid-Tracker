@@ -12,7 +12,9 @@ class App extends React.Component {
     render() {
         return (
             <div className={styles.container}>
-                <Cards/>
+                {/* Calling Display Cards */}
+                <Cards/> 
+                {/* Calling Country Picker drop down component */}
                 <CountryPicker/>
                 <Chart/>
             </div>
