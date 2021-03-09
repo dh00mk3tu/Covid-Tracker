@@ -16,24 +16,26 @@ const Cards = (bruh) => {
                         <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
                     </CardContent>
                 </Grid>
+
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
-                            Infected 
+                            Recovered 
                         </Typography>
                         <Typography variant="h5">Real Data</Typography>
                         <Typography color="textSecondary">Real Data</Typography>
-                        <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
+                        <Typography variant="body2">Number of Humans Recovered from Covid -19</Typography>
                     </CardContent>
                 </Grid>
+
                 <Grid item component={Card}>
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
-                            Infected 
+                            Deaths
                         </Typography>
                         <Typography variant="h5">Real Data</Typography>
                         <Typography color="textSecondary">Real Data</Typography>
-                        <Typography variant="body2">Number of Humans Infected with Covid -19</Typography>
+                        <Typography variant="body2">Number of Humans Lost to Covid -19</Typography>
                     </CardContent>
                 </Grid>
             </Grid>
