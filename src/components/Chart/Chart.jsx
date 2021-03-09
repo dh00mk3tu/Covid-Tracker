@@ -35,6 +35,21 @@ const Chart = ({data, country}) => {
             }}
         />) : null
     );
+
+    const barChart = (
+        data.confirmed
+        ? (
+            <Bar>
+                data={{
+
+                }}
+                options= {{
+                    legend: {display:false},
+                    title: {display: true, text:`Status of ${country}`},
+                }}
+            </Bar>
+        ) : null
+    )
     return (
         <div className={styles.container}>
             {lineChart}    
