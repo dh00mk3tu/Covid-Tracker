@@ -13,6 +13,7 @@ const Cards = (bruh) => {
                         </typography>
                         <typography variant="h5">Real Data</typography>
                         <typography color="textSecondary">Real Data</typography>
+                        <typography variant="body2">Number of Humans Infected with Covid -19</typography>
                     </CardContent>
                 </Grid>
             </Grid>
