@@ -3,7 +3,7 @@
 Covid Tracker Application in React.
 ---
 This light weight web app tracks active Covid cases of 192 Countries and Global cases. It represents the data using interactive Bar Graphs & Line Charts
-Click on "Live" below to check theh react app. This is the Readme home page of the application.
+Click on "Live" below to check the react app.
 
 <p style="text-align: center; font-size:35px"><a href="https://corona-watch.netlify.app/">Live</a></p>
 
