@@ -1,6 +1,5 @@
 {
-  "homepage": "http://dh00mk3tu.github.io/Covid-Tacker",
-  "name": "corona_app",
+  "name": "covid_track",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
